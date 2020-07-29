@@ -1,14 +1,28 @@
 <!-- 
-  -------------------------- GoMyCode HTML Checkpoint ---------------------------
+  -------------------------- GoMyCode CSS Checkpoint ---------------------------
   Developer; Fatima Zohra BELABDI
-  Create: 15/07/2020
-  Last Modified: 20/07/2020
-  Resume: create a portfolio web page with the instruction below:
+  Create: 24/07/2020
+  Last Modified: 29/07/2020
+  Resume: 
 
-        - Semantic Tags (Done).
-        - Adds a video/Audio to web page (Done).
-        - Use Local Links use Lists Or Tables (Done).
-        - Use Forms
+  The checkpoint must follow these rules:
+
+    •  Make the navbar responsive. (Done)
+
+    •  Use flexbox in the About/Work Sections. (Done)
+
+    •  Use CSS grid to style Resume Section. (Done)
+
+    • Style with different fonts. (Done)
+ 
+ 
+ Instructions:
+
+    1-Style the navbar. (Done)
+
+    2-Style the “About” section ,”Work” Section,”Resume” Section,”Contact”Section (Done)
+
+    3-Style The page footer. (Done)
 -->
 
 <!DOCTYPE html>
@@ -16,9 +30,19 @@
 
 <head>
     <meta charset="utf-8">
+    <!-- added because of toggle device toolbar in chrome , in order t use emulator device -->
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title> FATIMA ZOHRA BELABDI</title>
     <!-- CSS File -->
     <link rel="stylesheet" type="text/css" href="css/style.css" />
+
+    <!-- bootstrap link used in the navbar menu-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <!-- cdn font-awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 </head>
 
 <body>
@@ -26,106 +50,399 @@
     <!-- Semantic Tag Header -->
     <header>
         <div class="wrap">
-            <div class="title-area">
 
-                <img src="res/Fatima-Zohra_header.PNG" alt="Fatima Zohra">
-
-            </div>
             <!-- 1-Create the navbar: Home,About,Work,Resume,Contact  -->
-            <div class="menu">
-                <nav class="nav">
-                    <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#work">Work</a></li>
-                        <li><a href="#inspiration"> Inspiration </a></li>
-                        <li><a href="#resume">Resume</a></li>
-                        <li><a href="#contact">Contact</a></li>
+
+            <nav class="navbar  navbar-expand-md navbar-light bg-light">
+                <a href="#" class="navbar-brand">
+                    <img src="res/Fatima-Zohra_header.PNG" alt="Fatima Zohra">
+                </a>
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <!-- ml-auto  to switch item menu to the right-->
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item"><a href="#home" class="nav-link active">Home</a></li>
+                        <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                        <li class="nav-item"><a href="#work" class="nav-link">Work</a></li>
+                        <li class="nav-item"><a href="#inspiration" class="nav-link"> Inspiration </a></li>
+                        <li class="nav-item"><a href="#resume" class="nav-link">Resume</a></li>
+                        <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
                     </ul>
-                </nav>
-            </div>
+
+                </div>
+            </nav>
+
         </div>
     </header>
 
     <!-- Semantic Tag Main -->
     <main>
 
+        <!-- Use responsive background-img -->
+        <!-- Home Section -->
         <section id="home" class="home-section">
-            <div class="home-column">
 
+            <div class="home-column">
                 <img src="res/Fatima-Zohra_home.PNG" alt="Fatima Zohra_home">
             </div>
 
         </section>
 
 
+        <!-- Work Section -->
+        <!-- use flexbox  with two columns-->
         <section id="work" class=" work-section">
+
+
             <div class="card-about">
+                <!-- Section Title -->
                 <h6>
                     work
                 </h6>
-                <div class="IT-work">
-                    <img src="res/IT_Dev.jpg" alt="Developer">
-                    <h4> Design and Development </h4>
-                    <p>
-                        Design new applications and improve product performance and efficiency while developing new
-                        manufacturing ideas and systems.
-                    </p>
-                </div>
-                <div class="Fit-work">
-                    <img src="res/LifeStyle.jpg" alt="LifeStyle">
-                    <h4> Fitness and Life Style </h4>
-                    <p>
-                        Stop Dieting! flow the revolutionary approach to resets your metabolism and live the life you
-                        deserve
-                    </p>
+
+
+                <div class="row">
+                    <div class="column">
+                        <img src="res/IT_Dev.jpg" alt="Developer">
+                        <h4> Design and Development </h4>
+                        <p>
+                            Design new applications and improve product performance and efficiency while developing new
+                            manufacturing ideas and systems.
+                        </p>
+                    </div>
+                    <div class="column">
+                        <img src="res/LifeStyle.jpg" alt="LifeStyle">
+                        <h4> Fitness and Life Style </h4>
+                        <p>
+                            Stop Dieting! flow the revolutionary approach to resets your metabolism and live the life
+                            you deserve
+                        </p>
+                    </div>
                 </div>
             </div>
+
         </section>
 
-        <section id="about" class="about-section">
+
+        <!-- About Section -->
+        <section id="about" class="about-section  ">
+
 
             <div class="card-about">
-
+                <!-- Section Title -->
                 <h6>
                     About
                 </h6>
-                <img src="res/hi.PNG" alt="hi">
-                <div class="about">
-                    <h1>
-                        I am Fatima Zohra
-                    </h1>
-                    <p>
-                        A developer, fitness & lifestyle passionate
-                        , captivating motivational for new challenges.<br>
-                        Find more about me on my next projects with GoMycode !!
-                    </p>
+                <div style="display: inline-block; margin-left: -50%;">
+                    <img src="res/hi.PNG" alt="hi">
                 </div>
-
-
+                <div class="flex-about">
+                    <div>
+                        <h1>
+                            I am Fatima Zohra
+                        </h1>
+                        <p>
+                            A developer, fitness & lifestyle passionate
+                            , captivating motivational for new challenges.<br>
+                            Find more about me on my next projects with GoMycode !!
+                        </p>
+                    </div>
+                </div>
             </div>
+
 
         </section>
 
-        <section id="resume" style="background-color:#464646; height: 400px;">
+        <!-- Resume Section -->
+        <section id="resume" class="resume-section">
 
-            <div class="card-about" style="border-top: 0;">
-
+            <div class="card-about">
+                <!-- Section Title -->
                 <h6>
                     Resume
                 </h6>
+                <div class="resume">
+
+                    <img src="res/BFZ.JPG" alt="FatimaZohraBELABDI">
+
+
+                    <p>
+                        Driven by great will and motivation to
+                        succeed. My personal qualities and
+                        professionals allow me to accomplish my
+                        work in the best manners. I'm currently looking for
+                        new challenges at the height of my
+                        ambitions.
+                    </p>
+
+                </div>
+            </div>
+
+            <!-- Use CSS Grid with two columns to style the Resume Section -->
+            <div class="grid-container ">
+
+                <!-- First column of the Grid-->
                 <div>
-                    <h1 style="color:#fff">
-                        Resume Section
-                    </h1>
+
+                    <!-- WORK EXPERIENCES DIV-->
+                    <div class="card-resume">
+
+                        <h6> WORK EXPERIENCES </h6>
+
+                        <!-- Software Engineer, AMNAL -->
+                        <div>
+                            <div class="Exp-details">
+                                <div class="post"> Software Engineer </div>
+                                <div class="post-periode"> AMNAL | 2018 - Present </div>
+                            </div>
+
+                            <ul class="roles">
+                                <li> - Manages workstations, user accounts, Internet connectivity including routers,
+                                    modems, firewall, proxy. </li>
+                                <li>
+                                    - Application management.
+                                </li>
+                                <li>
+                                    - Setting up backup and restore of databases (Microsoft Sql Server 2014).
+                                </li>
+                                <li>
+                                    - Systems administrator, server management.
+                                </li>
+
+                            </ul>
+
+                        </div>
+
+                        <!-- Software Developer , CDTA -->
+                        <div>
+                            <div class="Exp-details">
+                                <div class="post"> Software Developer </div>
+                                <div class="post-periode"> CDTA, FikraTech | 2017 - 2018 </div>
+                            </div>
+                            <ul class="roles">
+
+                                <li> - 'WIJHATIC' Application, Processing transport route data in the Smart City theme,
+                                    Hard
+                                    innovation 2017.</li>
+                                <li> - Development tools: Android Studio, Google API for location of
+                                    stations and stops for different types of transport. </li>
+
+
+                            </ul>
+                        </div>
+
+                        <!-- Assistant Manager, GLC Center -->
+
+                        <div>
+                            <div class="Exp-details">
+                                <div class="post"> Assistant Manager </div>
+                                <div class="post-periode"> GLC,Centre | 2014 - 2016 </div>
+                            </div>
+                            <ul class="roles">
+                                <li> - Organization of meetings and appointments. </li>
+                                <li> - Internal and external communication, coordinate the training schedule.</li>
+                            </ul>
+                        </div>
+
+                        <!-- Teacher, BBC school -->
+
+                        <div>
+                            <div class="Exp-details">
+                                <div class="post"> Teacher </div>
+                                <div class="post-periode"> BBC School | 2011 - 2014 </div>
+                            </div>
+                            <ul class="roles">
+                                <li> - Provide courses adapted to students study plans for math and physics.</li>
+
+                            </ul>
+                        </div>
+
+                    </div>
+
+                    <!-- Education DIV -->
+                    <div class="card-resume">
+                        <h6> Education</h6>
+
+                        <!-- Fitness trainer -->
+                        <div>
+                            <div class="Exp-details">
+                                <div class="post"> Fitness Trainer, 1<sup>st</sup> degree </div>
+                                <div class="post-periode"> NFS STS | 2017 - 2019 </div>
+                            </div>
+                        </div>
+
+                        <!-- Master -->
+                        <div>
+                            <div class="Exp-details">
+                                <div class="post"> Artificial Intelligence, Master Degree </div>
+                                <div class="post-periode"> USTHB | 2014 - 2016 </div>
+                            </div>
+                        </div>
+
+                        <!-- WebMaster -->
+                        <div>
+                            <div class="Exp-details">
+                                <div class="post"> Webmaster training </div>
+                                <div class="post-periode"> IT competences | 2013 - 2014 </div>
+                            </div>
+                        </div>
+
+                        <!-- Licence -->
+                        <div>
+                            <div class="Exp-details">
+                                <div class="post"> Computer science degree </div>
+                                <div class="post-periode"> USTHB | 2012 - 2014 </div>
+                            </div>
+                        </div>
+
+                        <!-- Baccalaureate -->
+                        <div>
+                            <div class="Exp-details">
+                                <div class="post"> Mathematics Baccalaureate </div>
+                                <div class="post-periode"> Amara Rachid | 2009 - 2010 </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project DIV -->
+                    <div class="card-resume">
+                        <h6> Project </h6>
+
+                        <!-- Master Project-->
+                        <div>
+                            <div class="Exp-details">
+                                <div class="post">Ontology alignment system based on the theory of approximate sets
+                                    (rough
+                                    set) (SARS). </div>
+                                <div class="post-periode"> USTHB | 2016 </div>
+                            </div>
+                            <ul class="roles">
+
+                                <li> Tools and development environment:</li>
+                                <li> - Ontology editor (Protégé)), WordNet. </li>
+                                <li> - Eclipse platform with Jena API, Protégé and WordNet (JAR extension module).
+                                </li>
+                                <li> - Programming language: Java. </li>
+
+                            </ul>
+                        </div>
+
+
+                        <!-- Licence Project-->
+                        <div>
+                            <div class="Exp-details">
+                                <div class="post">Implementation of an Android decision support tool adapted to an
+                                    application of
+                                    geomarketing.</div>
+                                <div class="post-periode"> USTHB | 2014 </div>
+                            </div>
+                            <ul class="roles">
+
+                                <li> Tools and development environment:</li>
+                                <li> - Eclipse platform with Android Development Tool (ADT) integration, Android
+                                    SDK.</li>
+
+                            </ul>
+                        </div>
+                    </div>
+
                 </div>
 
 
+                <!-- Second column of the Grid-->
+                <div>
+
+                    <!-- SKILLS DIV -->
+                    <div class="card-resume">
+                        <h6> SKILLS </h6>
+                        <!-- Technical DIV -->
+                        <div>
+                            <div class="Exp-details">
+                                <div class="post"> Technical </div>
+                            </div>
+
+                            <ul class="roles">
+                                <li> project study and design </li>
+                                <li> Object-oriented (Java/C#) </li>
+                                <li> C language </li>
+                                <li> Python </li>
+                                <li> DB: SQL , Oracle/MySQL, - SQL Server</li>
+                                <li> Web: HTML/CSS/JavaScript </li>
+                                <li> Networks: IPv4, RIP, OSPF, EIGRP,<br> VLAN, NAT, PAT, DHCP. </li>
+                                <li> Latex </li>
+                            </ul>
+
+                        </div>
+                        <!-- Professional DIV -->
+                        <div>
+
+                            <div class="Exp-details">
+                                <div class="post"> Professional </div>
+                            </div>
+                            <p>
+                            <ul class="roles">
+                                <li> Effective communication </li>
+                                <li>
+
+                                    Team player
+
+                                </li>
+                                <li>
+                                    Strong problem solver
+                                </li>
+                                <li>
+                                    Good time management
+                                </li>
+
+                            </ul>
+                            </p>
+
+                        </div>
+
+                        <!-- Language DIV -->
+
+                        <div class="card-resume">
+                            <h6> Languages </h6>
+                            <div class="Exp-details">
+                            </div>
+                            <ul class="roles">
+                                <li> Arab (native) </li>
+                                <li> French (Professional) </li>
+                                <li> English (Intermediate) </li>
+
+
+                            </ul>
+                        </div>
+
+                        <!-- Interests DIV -->
+
+                        <div class="card-resume">
+                            <h6> Interests </h6>
+                            <div class="Exp-details">
+                            </div>
+                            <ul class="roles">
+                                <li> Photography </li>
+                                <li> Reading (Literature and Scientific Review).</li>
+                                <li> Fitness, health and lifestyle.</li>
+                                <li> Traveling </li>
+
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+
             </div>
+
         </section>
 
+        <!-- inspiration Section -->
         <section id="inspiration" style="height: 400px; margin-bottom: 50px;">
             <div class="card-about">
+                <!-- Section Title -->
                 <h6>
                     Inspiration
                 </h6>
@@ -133,12 +450,10 @@
                 <iframe class="responsive-iframe" src="https://www.youtube.com/embed/TBoCOqsEoJQ">
                 </iframe>
 
-
-
             </div>
         </section>
 
-
+        <!-- contact Section -->
         <section id="contact" style=" height: 400px;">
 
             <div class="card-about" style="border-top: 0;">
@@ -147,7 +462,7 @@
                 </h6>
 
                 <form>
-                    <input type="text" id="fname" placeholder="First name  Last name"><br>
+                    <input type="text" id="fname" placeholder=" Name"><br>
                     <br></br>
                     <input type="text" id="email" placeholder="Email"><br><br> <br>
                     <input type="text" id="msg" placeholder="Your message "><br><br>

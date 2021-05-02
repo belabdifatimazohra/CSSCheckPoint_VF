@@ -54,4 +54,4 @@ or use Live server and Open [http://localhost:5050](http://localhost:5050) to vi
 Visit https://portfolio1belabdi.netlify.app
 ## License
 
-**Free responsive web site!**
+**My first work HTML, CSS!**

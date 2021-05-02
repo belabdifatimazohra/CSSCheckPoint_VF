@@ -29,7 +29,7 @@
 - 🖍📐&nbsp; Build your own portfolio using only HTML, CSS from scratch.
 
 - ⚡ &nbsp;   Make it responsive using Media  query.
-- 
+
 # 🛠 Tech Stack
 
 - 💻 &nbsp;
